@@ -53,14 +53,19 @@ routes.post('/add', (req,res)=> {
 
 // Delete - delete data
 // we will yse a delete to demonstrate    usaremos o delete para demonstrar
-routes.delete( =>{
-    
+routes.delete('/:id', (req, res) =>{
+    const id = req.params.id
+
+    let newDB = db.filter(item=>{
+        if(!item[id])
+            return item
+    })
+
+    db = newDB //our db will be modified
+    return res.send(newDB)
 })
 
 
 
-
-
-// PUT - modificate data
 
 module.exports = routes
