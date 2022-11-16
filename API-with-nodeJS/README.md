@@ -42,3 +42,6 @@ Quando inserirmos todos os parâmetros, o arquivo package.json será criado, com
 ```
 Ou seja, precisamos usar o comando npm install e colocarmos o que desejamos instalar. Após darmos esse comando no terminal, a pasta node_modules será criada, com todas as dependencias desses frameworks que instalamos, e virá junto o arquivo package-lock.json!
 (Por razões de segurança, não estarei upando a pasta de node_modules aqui e nem o arquivo de package-lock.json, mas ela será criada com a instalação dos frameworks)
+Repare também que os frameworks goram devidamente adicionados no nosso package.json
+
+Dentro de scripts em package.json, eu coloquei "start": "nodemon index.js", então criei um comando chamado start, e quando eu der ele com npm start, irá executar o nodemon e ficará esperando modificações, que é uma das funcionalidades que desejamos do nodemon
